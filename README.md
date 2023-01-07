@@ -47,6 +47,8 @@ This split data is then manipulated to the form which is accepted by GPT-2 algor
 - We then train and finetune the loaded pre-trained GPT-2 model using the training and testing data that was prepared in the previous step 
 - Remember to use a GPU runtime for model training as it would take very long otherwise
 - The best model is saved in the directory you specify
+- I have already trained a model for 100 epochs if you do not want to spend the long time of training the model and would wish to load it and use it 
+- Trained model drive link : https://drive.google.com/drive/folders/1ZAjNiva0JQfdVt6rG7gsmETgQiJl9Sfi?usp=sharing
 
 ### UI Creation and Model output (CommentaryGenerator_Output&UI.ipynb)
 - Using gradio library we can create a simple yet elegent UI for our commentary generator easily
