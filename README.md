@@ -41,10 +41,30 @@
 This split data is then manipulated to the form which is accepted by GPT-2 algorithm and the data is now ready
 - The pre-processed data can be found in the Data folder of the Sentiment Analysis section in this repository
 
-###
+### Model training (CommentaryGeneration_ModelTraining.ipynb)
+- Using simpletransformers library we can quickly load a pre-trained GPT-2 language modelling model from huggingface
+- We provide our custom arguments for the model like number of epochs (100), when to save the model (every 25 epochs) training batch size (10) and much more
+- We then train and finetune the loaded pre-trained GPT-2 model using the training and testing data that was prepared in the previous step 
+- Remember to use a GPU runtime for model training as it would take very long otherwise
+- The best model is saved in the directory you specify
 
-###
+### UI Creation and Model output (CommentaryGenerator_Output&UI.ipynb)
+- Using gradio library we can create a simple yet elegent UI for our commentary generator easily
+- We load our trained model and provide it arguments like length of commentary to be produced
+- We use the generate function to generate commentary given the event that has occurred (SUCCESS we have a commentary generator)
+- Output collected is manipulated slightly according to the format of websites and also such that only relevent results are displayed (Unwanted bits or irrelevent commentary is cut out)
+- The UI is created so users can enter a batter, bowler name followed by an event and by a click of a button commentary is generated aptly and is displayed on the screen
+
 
 # Demo
-
+ 
 # Conclusion
+- Regarding sentiment analysis the Roberta model is more sure of the sentiment that it predicts than the VADER model
+- Commentary is usually neutral bu slightly skewed on the positive side, negative commentary is very low.
+- The commentary generator works great and provides apt commentary for a wide range of events in cricket
+- It is also able to give unique commentary each time for the same event entered
+- There are some issues regarding nouns like cricketers name suddenly popping out of nowhere in the generated commentary. The reason for this is during training it has encountered some fielders names and names in the middle of the commentary text which I have not been able to extract out or replace
+- Better performance can be achieved by fully eliminating nouns in the training data
+- Commentary generated is relevent more times than not
+- The notebooks are self explanatory and if you are lost there are comments to guide you along the way
+
