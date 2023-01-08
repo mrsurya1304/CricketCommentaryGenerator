@@ -1,5 +1,5 @@
 # Cricket Commentary Sentiment Analysis and Generation
-- NLP Project which aims to dissect cricket commentary data, find the sentiment of cricket commentary and aim to generate cricket commentary automatically givem some keywords
+- NLP Project which aims to dissect cricket commentary data, find the sentiment of cricket commentary and aim to generate cricket commentary automatically givem event generated through a prompt
 - We have Asia cup data which is smaller which we use for sentiment analysis and we have IPL ball by ball data for 3 years which is bigger for training a model for automatic commentary generation
 - All data is from Kaggle
 - Sentiment analysis is performed to see if commentary given is neutral in sentiment or slightly positive
@@ -8,7 +8,7 @@
 # Algorithms used
 
 ### Sentiment Analysis
-- We try out and compare 2 algorithms
+We try out and compare 2 algorithms
 - VADER (Valence Aware Dictionary and Sentiment Reasoner) lexicon and rule based bag of words model
 - Roberta Pre-trained model (transform based)
 
@@ -24,7 +24,9 @@
 - Comparison of the models is done by a plot and conclusions are drawn (in depth in the notebook)
 
 ## Commentary Generation
- Commentary Generator is done in google colab platform as we require google drive for storage and GPU for fast model training
+ - Commentary Generator is done in google colab platform as we require google drive for storage and GPU for fast model training
+ - Beware training a model using GPU may be expensive and may exhaust a free GPU not allowing you to use a GPU further for a couple of days in google colab
+ 
  We perform 3 steps to produce a model for automatic commentary generation
  1. Dataset preparation and pre-processing
  2. Model training
@@ -67,7 +69,7 @@ This split data is then manipulated to the form which is accepted by GPT-2 algor
  
 # Conclusion
 - Regarding sentiment analysis the Roberta model is more sure of the sentiment that it predicts than the VADER model
-- Commentary is usually neutral bu slightly skewed on the positive side, negative commentary is very low.
+- Commentary is usually neutral but slightly skewed on the positive side and negative commentary is very low.
 - The commentary generator works great and provides apt commentary for a wide range of events in cricket
 - It is also able to give unique commentary each time for the same event entered
 - There are some issues regarding nouns like cricketers name suddenly popping out of nowhere in the generated commentary. The reason for this is during training it has encountered some fielders names and names in the middle of the commentary text which I have not been able to extract out or replace
