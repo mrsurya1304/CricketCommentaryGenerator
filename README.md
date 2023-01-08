@@ -58,7 +58,12 @@ This split data is then manipulated to the form which is accepted by GPT-2 algor
 - The UI is created so users can enter a batter, bowler name followed by an event and by a click of a button commentary is generated aptly and is displayed on the screen
 
 
-# Demo
+# How the commentary generator looks like
+![alt text](https://github.com/mrsurya1304/CricketCommentaryGenerator/blob/main/Samples/sample1.png)
+![alt text](https://github.com/mrsurya1304/CricketCommentaryGenerator/blob/main/Samples/sample2.png)
+![alt text](https://github.com/mrsurya1304/CricketCommentaryGenerator/blob/main/Samples/sample3.png)
+![alt text](https://github.com/mrsurya1304/CricketCommentaryGenerator/blob/main/Samples/sample4.png)
+![alt text](https://github.com/mrsurya1304/CricketCommentaryGenerator/blob/main/Samples/sample5.png)
  
 # Conclusion
 - Regarding sentiment analysis the Roberta model is more sure of the sentiment that it predicts than the VADER model
