@@ -1,5 +1,5 @@
 # Cricket Commentary Sentiment Analysis and Generation
-- NLP Project which aims to dissect cricket commentary data, find the sentiment of cricket commentary and aim to generate cricket commentary automatically givem event generated through a prompt
+- NLP Project which aims to dissect cricket commentary data, find the sentiment of cricket commentary and aim to generate cricket commentary automatically given event generated through a prompt
 - We have Asia cup data which is smaller which we use for sentiment analysis and we have IPL ball by ball data for 3 years which is bigger for training a model for automatic commentary generation
 - All data is from Kaggle
 - Sentiment analysis is performed to see if commentary given is neutral in sentiment or slightly positive
